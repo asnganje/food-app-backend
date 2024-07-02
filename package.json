@@ -4,6 +4,7 @@
   "description": "food delivery backend app",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/asnganje/food-app-backend/issues"
   },
-  "homepage": "https://github.com/asnganje/food-app-backend#readme"
+  "homepage": "https://github.com/asnganje/food-app-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
 }
