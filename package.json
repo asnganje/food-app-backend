@@ -1,0 +1,19 @@
+{
+  "name": "food-app-backend",
+  "version": "1.0.0",
+  "description": "food delivery backend app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asnganje/food-app-backend.git"
+  },
+  "author": "abdulrahman nganje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asnganje/food-app-backend/issues"
+  },
+  "homepage": "https://github.com/asnganje/food-app-backend#readme"
+}
