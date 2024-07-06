@@ -9,6 +9,9 @@ const loginUser = async (req,res)=> {
     const {email} = req.body
 
     const user = await User.findOne({email})
+    if (user === 'null') {
+        res.status(400).json({status:'fail'})
+    }
     res.status(200).json({status:'success', data:user})
 }
 const getAllUsers = async(req,res)=> {
@@ -16,4 +19,8 @@ const getAllUsers = async(req,res)=> {
     res.status(200).json({status: 'success', data: users})
 }
 
-module.exports = {createUser, getAllUsers, loginUser}
+const logoutUser = async (req, res) => {
+    res.status(200).json({ status: 'success', message: 'Logged out successfully' });
+};
+
+module.exports = { createUser, getAllUsers, loginUser, logoutUser };
