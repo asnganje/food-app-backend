@@ -1,15 +1,17 @@
 require('dotenv').config()
 require('express-async-errors')
+const cors = require('cors')
 const express = require('express');
 const connectDB = require('./server/db/connect');
 const userRouter = require('./server/routes/userRoute')
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 app.use('/api/v1/foodapp', userRouter)
 
 app.use('*', (req, res)=> {
-  res.json({msg: 'Resource or route not found'})
+  res.status(404).json({msg: 'Resource or route not found'})
 })
 
 app.use((err, req, res, next)=> {
