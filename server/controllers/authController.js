@@ -5,9 +5,15 @@ const createUser = async (req,res) => {
     res.status(201).json({status: 'success', data: user})
 }
 
+const loginUser = async (req,res)=> {
+    const {email} = req.body
+
+    const user = await User.findOne({email})
+    res.status(200).json({status:'success', data:user})
+}
 const getAllUsers = async(req,res)=> {
     const users = await User.find({})
     res.status(200).json({status: 'success', data: users})
 }
 
-module.exports = {createUser, getAllUsers}
+module.exports = {createUser, getAllUsers, loginUser}
